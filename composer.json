@@ -27,7 +27,7 @@
         "league/container": "^2.2",
         "symfony/finder": "^3.1",
         "2amigos/yii2-config-kit": "^1.0",
-        "2amigos/yii2-usuario": "^1.0@beta"
+        "2amigos/yii2-usuario": "^1.0"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",

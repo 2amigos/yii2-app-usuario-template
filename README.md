@@ -5,7 +5,8 @@
 [![Total Downloads](https://poser.pugx.org/2amigos/yii2-app-usuario-template/downloads)](https://packagist.org/packages/2amigos/yii2-app-usuario-template)
 
 
-This project is an example of what can be done with  
+This project is an example of what can be done with 
+[https://github.com/2amigos/yii2-app-template](https://github.com/2amigos/yii2-app-template)
 [https://github.com/2amigos/yii2-config-kit](https://github.com/2amigos/yii2-config-kit) + 
 [https://github.com/2amigos/yii2-usuario](https://github.com/2amigos/yii2-usuario). Its a fully working Yii 2 project 
 boilerplate.
