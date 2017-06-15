@@ -1,0 +1,102 @@
+{
+    "name": "2amigos/yii2-app-usuario-template",
+    "description": "Yii 2 Project Template",
+    "keywords": [
+        "yii2",
+        "framework",
+        "basic",
+        "project template",
+        "2amigos",
+        "config"
+    ],
+    "homepage": "https://github.com/2amigos/yii2-app-template",
+    "type": "project",
+    "license": "BSD-3-Clause",
+    "support": {
+        "issues": "https://github.com/2amigos/yii2-app-usuario-template/issues?state=open",
+        "source": "https://github.com/2amigos/yii2-app-usuario-template"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": ">=5.4.0",
+        "yiisoft/yii2": "~2.0.5",
+        "yiisoft/yii2-bootstrap": "~2.0.0",
+        "yiisoft/yii2-swiftmailer": "~2.0.0",
+        "vlucas/phpdotenv": "^2.4",
+        "league/container": "^2.2",
+        "symfony/finder": "^3.1",
+        "2amigos/yii2-config-kit": "^1.0",
+        "2amigos/yii2-usuario": "^1.0@beta"
+    },
+    "require-dev": {
+        "yiisoft/yii2-debug": "~2.0.0",
+        "yiisoft/yii2-gii": "~2.0.0",
+        "yiisoft/yii2-faker": "~2.0.0",
+        "codeception/base": "^2.2.3",
+        "codeception/verify": "~0.3.1",
+        "codeception/specify": "~0.4.3",
+        "facebook/webdriver": "^1.2",
+        "squizlabs/php_codesniffer": "^2.7",
+        "friendsofphp/php-cs-fixer": "^2.0",
+        "phpmd/phpmd": "^2.4"
+    },
+    "scripts": {
+        "post-root-package-install": [
+            "php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ],
+        "post-create-project-cmd": [
+            "yii\\composer\\Installer::postCreateProject",
+            "php yii post-install/generate-cookie-validation"
+        ],
+        "start-test-server": [
+            "php -r \"file_exists('public/index-test.php') || copy('tests/_support/index-test.php', 'public/index-test.php');\"",
+            "php tests/bin/yii serve --docroot=@web"
+        ],
+        "stop-test-server": [
+            "php -r \"unlink('public/index-test.php');\"",
+            "kill $(lsof -ti tcp:8080)"
+        ],
+        "start-server": [
+            "php yii serve --docroot=@web"
+        ],
+        "stop-server": [
+            "kill $(lsof -ti tcp:8080)"
+        ]
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": [
+                "./src/App"
+            ]
+        }
+    },
+    "extra": {
+        "yii\\composer\\Installer::postCreateProject": {
+            "setPermission": [
+                {
+                    "runtime": "0777",
+                    "public/assets": "0777",
+                    "yii": "0755"
+                }
+            ]
+        }
+    },
+    "config": {
+        "preferred-install": {
+            "sidekit/*": "source",
+            "*": "auto"
+        },
+        "fxp-asset": {
+            "installer-paths": {
+                "npm-asset-library": "vendor/npm",
+                "bower-asset-library": "vendor/bower"
+            },
+            "vcs-driver-options": {
+                "github-no-api": true
+            },
+            "git-skip-update": "2 days",
+            "pattern-skip-version": "(-build|-patch)"
+        }
+    }
+}
