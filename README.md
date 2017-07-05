@@ -13,7 +13,7 @@ boilerplate.
 
 For further information, please follow these links: 
 
-- Step by Step Installation Process - [todo]
+- [Step by Step Installation Process](http://www.2amigos.us/blog/how-to-work-with-yii-2-config-kit-and-yii-2-usuario-module)
 - [Yii 2 Application Template](https://github.com/2amigos/yii2-app-template)
 - [Yii 2 Config Kit](https://github.com/2amigos/yii2-config-kit)
 - [Yii 2 Usuario Module](https://github.com/2amigos/yii2-usuario)
