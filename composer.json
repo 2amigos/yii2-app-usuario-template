@@ -84,7 +84,6 @@
     },
     "config": {
         "preferred-install": {
-            "sidekit/*": "source",
             "*": "auto"
         },
         "fxp-asset": {
